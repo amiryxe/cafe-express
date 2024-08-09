@@ -35,7 +35,9 @@ app.get('/', (req: Request, res: Response) => {
 // Sync Database and start server
 
 sequelize
-  .sync({ force: true })
+  .sync
+  // { force: true } // clear db by run server
+  ()
   .then(() => {
     console.log('Database synced')
 
