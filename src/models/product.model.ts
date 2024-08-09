@@ -6,6 +6,7 @@ class Product extends Model {
   public name!: string
   public price!: number
   public categoryId!: number
+  public imageUrl!: string
 }
 
 Product.init(
@@ -26,6 +27,10 @@ Product.init(
     categoryId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {

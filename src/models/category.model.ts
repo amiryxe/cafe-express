@@ -4,6 +4,7 @@ import sequelize from '../database'
 class Category extends Model {
   public id!: number
   public name!: string
+  public imageUrl!: string
 }
 
 Category.init(
@@ -16,6 +17,10 @@ Category.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
