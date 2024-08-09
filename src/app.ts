@@ -8,6 +8,7 @@ import Order from './models/order.model'
 
 import customerRoutes from './routes/customer.routes'
 import categoriesRoutes from './routes/category.routes'
+import productsRoutes from './routes/product.routes'
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -17,6 +18,7 @@ app.use(express.json())
 // connect routes to api path
 app.use('/api/customers', customerRoutes)
 app.use('/api/categories', categoriesRoutes)
+app.use('/api/products', productsRoutes)
 
 // Define associations
 Category.hasMany(Product, { foreignKey: 'categoryId' })
