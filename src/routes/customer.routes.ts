@@ -10,10 +10,10 @@ import {
 
 const router = Router()
 
-router.post('/customers', createCustomer)
-router.get('/customers', getCustomers)
-router.get('/customers/:id', getCustomerById)
-router.put('/customers/:id', updateCustomer)
-router.delete('/customers/:id', deleteCustomer)
+router.post('/', createCustomer)
+router.get('/', getCustomers)
+router.get('/:id', getCustomerById)
+router.put('/:id', updateCustomer)
+router.delete('/:id', deleteCustomer)
 
 export default router

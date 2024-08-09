@@ -5,12 +5,15 @@ import Customer from './models/customer.model'
 import Product from './models/product.model'
 import Category from './models/category.model'
 import Order from './models/order.model'
-import { error } from 'console'
+
+import customerRoutes from './routes/customer.routes'
 
 const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
+
+app.use('/api/customers', customerRoutes)
 
 // Define associations
 Category.hasMany(Product, { foreignKey: 'categoryId' })
