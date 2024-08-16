@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+
 import Customer from '../models/customer.model'
 
 export const createCustomer = async (req: Request, res: Response) => {

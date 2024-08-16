@@ -1,4 +1,5 @@
 import { DataTypes, Model } from 'sequelize'
+
 import sequelize from '../database'
 
 class Customer extends Model {
